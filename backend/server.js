@@ -19,7 +19,10 @@ const __dirname = path.dirname(__filename);
 
 
 app.use(
-    cors()
+  cors({
+    origin: "*",
+    methods: "GET,POST,PUT,DELETE,PATCH",
+  })
 );
 
 app.use(express.json());
