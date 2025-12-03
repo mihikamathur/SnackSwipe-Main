@@ -20,8 +20,9 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: "*",
-    methods: "GET,POST,PUT,DELETE,PATCH",
+    origin: process.env.FRONTEND_URL || "https://snack-swipe-main.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   })
 );
 
